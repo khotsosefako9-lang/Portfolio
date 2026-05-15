@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Khotso Sefako | Digital Strategist & AI Workflow Builder</title>
+<meta name="description" content="Digital Strategist, AI Content Writer & Automation Specialist. Building modern content systems that combine strategy, AI workflows, and audience-focused communication." />
+<meta property="og:title" content="Khotso Sefako | Digital Strategist & AI Workflow Builder" />
+<meta property="og:description" content="Remote-ready. AI-native. Strategically creative." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080b0f;
+    --bg2: #0e1217;
+    --bg3: #131820;
+    --surface: #161c25;
+    --surface2: #1d2535;
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.12);
+    --text: #e8edf2;
+    --text2: #8d9aaa;
+    --text3: #5a6575;
+    --accent: #4a9eff;
+    --accent2: #7ec8ff;
+    --gold: #c8a96e;
+    --gold2: #e8c98e;
+    --green: #3ecf8e;
+    --serif: 'Instrument Serif', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ─── NOISE OVERLAY ─────────────────────────── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.4;
+  }
+
+  /* ─── NAV ───────────────────────────────────── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(8,11,15,0.82);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s ease;
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text2);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text); }
+
+  .nav-cta {
+    background: var(--accent);
+    color: #fff !important;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 600 !important;
+    transition: opacity 0.2s !important;
+  }
+
+  .nav-cta:hover { opacity: 0.85; }
+
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* ─── SECTIONS ──────────────────────────────── */
+  section { padding: 100px 5vw; }
+
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  /* ─── HERO ──────────────────────────────────── */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-glow {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(74,158,255,0.07) 0%, transparent 70%);
+    top: -200px;
+    right: -200px;
+    pointer-events: none;
+  }
+
+  .hero-glow2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,169,110,0.05) 0%, transparent 70%);
+    bottom: 0;
+    left: -100px;
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(74,158,255,0.08);
+    border: 1px solid rgba(74,158,255,0.2);
+    color: var(--accent2);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.1s forwards;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 2s ease infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .hero-name {
+    font-family: var(--serif);
+    font-size: clamp(3.2rem, 7vw, 6.5rem);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 12px;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.2s forwards;
+  }
+
+  .hero-name em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-title {
+    font-size: clamp(1rem, 2.2vw, 1.35rem);
+    color: var(--text2);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.3s forwards;
+  }
+
+  .hero-desc {
+    font-size: 1.0rem;
+    color: var(--text2);
+    max-width: 540px;
+    line-height: 1.75;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.4s forwards;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.5s forwards;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    transition: all 0.2s;
+    box-shadow: 0 4px 20px rgba(74,158,255,0.25);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(74,158,255,0.35);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--text);
+    text-decoration: none;
+    padding: 13px 28px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: 1px solid var(--border2);
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    background: var(--surface);
+    border-color: rgba(255,255,255,0.2);
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.6s forwards;
+  }
+
+  .hero-stat-num {
+    font-family: var(--serif);
+    font-size: 2rem;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .hero-stat-label {
+    font-size: 0.75rem;
+    color: var(--text3);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 500;
+  }
+
+  /* ─── SECTION HEADER ────────────────────────── */
+  .section-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+
+  .section-title em { font-style: italic; color: var(--gold); }
+
+  .section-sub {
+    color: var(--text2);
+    font-size: 1.0rem;
+    max-width: 580px;
+    line-height: 1.7;
+  }
+
+  .section-header { margin-bottom: 60px; }
+
+  /* ─── ABOUT ─────────────────────────────────── */
+  #about { background: var(--bg2); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-text p {
+    color: var(--text2);
+    line-height: 1.85;
+    margin-bottom: 18px;
+    font-size: 0.97rem;
+  }
+
+  .about-text p strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .about-highlight {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    padding: 20px 24px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--text2);
+    line-height: 1.7;
+    margin-top: 28px;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+  }
+
+  .about-card-title {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .tag {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    color: var(--text2);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+
+  .tag-accent { background: rgba(74,158,255,0.08); border-color: rgba(74,158,255,0.2); color: var(--accent2); }
+  .tag-gold { background: rgba(200,169,110,0.08); border-color: rgba(200,169,110,0.2); color: var(--gold2); }
+
+  .about-metric {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .about-metric-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(62,207,142,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .about-metric-text {
+    font-size: 0.85rem;
+    color: var(--text2);
+  }
+
+  .about-metric-text strong { color: var(--green); }
+
+  /* ─── SKILLS ────────────────────────────────── */
+  #skills { background: var(--bg); }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .skill-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 28px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skill-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.02), transparent);
+    pointer-events: none;
+  }
+
+  .skill-card:hover {
+    border-color: var(--border2);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+
+  .skill-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+  }
+
+  .icon-blue { background: rgba(74,158,255,0.1); }
+  .icon-gold { background: rgba(200,169,110,0.1); }
+  .icon-green { background: rgba(62,207,142,0.1); }
+
+  .skill-card-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin-bottom: 20px;
+  }
+
+  .skill-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skill-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text2);
+    font-weight: 400;
+  }
+
+  .skill-list li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .skill-card:nth-child(2) .skill-list li::before { background: var(--gold); }
+  .skill-card:nth-child(3) .skill-list li::before { background: var(--green); }
+
+  /* ─── PROJECTS ──────────────────────────────── */
+  #projects { background: var(--bg2); }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .project-card:hover {
+    border-color: var(--border2);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+
+  .project-card.featured {
+    grid-column: span 2;
+  }
+
+  .project-banner {
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-banner-1 { background: linear-gradient(135deg, #0d1829 0%, #152040 50%, #0a1525 100%); }
+  .project-banner-2 { background: linear-gradient(135deg, #150f08 0%, #2a1e0e 50%, #1a1208 100%); }
+  .project-banner-3 { background: linear-gradient(135deg, #081510 0%, #0e2520 50%, #081510 100%); }
+
+  .project-banner-text {
+    font-family: var(--serif);
+    font-size: 3.5rem;
+    font-style: italic;
+    opacity: 0.12;
+    letter-spacing: -0.02em;
+    color: white;
+    white-space: nowrap;
+  }
+
+  .project-banner-badge {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .badge-blue { color: var(--accent2); }
+  .badge-gold { color: var(--gold2); }
+  .badge-green { color: var(--green); }
+
+  .project-body { padding: 28px; }
+
+  .project-title {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    color: var(--text);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .project-subtitle {
+    font-size: 0.78rem;
+    color: var(--text3);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .project-desc {
+    font-size: 0.9rem;
+    color: var(--text2);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .project-deliverables {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .deliverable {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    color: var(--text3);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+
+  /* ─── WRITING ───────────────────────────────── */
+  #writing { background: var(--bg); }
+
+  .writing-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 40px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 4px;
+    width: fit-content;
+  }
+
+  .tab-btn {
+    background: none;
+    border: none;
+    color: var(--text3);
+    padding: 8px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 500;
+    font-family: var(--sans);
+    letter-spacing: 0.03em;
+    transition: all 0.2s;
+  }
+
+  .tab-btn.active {
+    background: var(--bg);
+    color: var(--text);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  }
+
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  .hooks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  .hook-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.25s ease;
+    position: relative;
+  }
+
+  .hook-card:hover {
+    border-color: var(--border2);
+    transform: translateY(-3px);
+  }
+
+  .hook-num {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    color: rgba(255,255,255,0.05);
+    line-height: 1;
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+
+  .hook-text {
+    font-size: 0.92rem;
+    color: var(--text2);
+    line-height: 1.75;
+  }
+
+  .hook-text strong { color: var(--text); display: block; margin-bottom: 6px; }
+
+  .script-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .script-header {
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .script-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text3);
+  }
+
+  .script-topic {
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .script-body { padding: 28px 24px; }
+
+  .script-section-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    margin-top: 20px;
+  }
+
+  .script-section-label:first-child { margin-top: 0; }
+
+  .script-text {
+    font-size: 0.9rem;
+    color: var(--text2);
+    line-height: 1.8;
+    white-space: pre-line;
+  }
+
+  .carousel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .carousel-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .carousel-header {
+    background: linear-gradient(135deg, var(--surface2), var(--surface));
+    border-bottom: 1px solid var(--border);
+    padding: 20px 24px;
+  }
+
+  .carousel-header-title {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    color: var(--text);
+    font-style: italic;
+  }
+
+  .carousel-slides { padding: 20px 24px; }
+
+  .carousel-slide {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .carousel-slide:last-child { border-bottom: none; }
+
+  .slide-num {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text3);
+    min-width: 20px;
+    padding-top: 2px;
+  }
+
+  .slide-text {
+    font-size: 0.85rem;
+    color: var(--text2);
+    line-height: 1.6;
+  }
+
+  .slide-text strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+  /* ─── EXPERIENCE ────────────────────────────── */
+  #experience { background: var(--bg2); }
+
+  .timeline {
+    position: relative;
+    padding-left: 40px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: linear-gradient(180deg, var(--accent), var(--gold), transparent);
+    opacity: 0.4;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 48px;
+  }
+
+  .timeline-item:last-child { margin-bottom: 0; }
+
+  .timeline-dot {
+    position: absolute;
+    left: -44px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg2);
+    box-shadow: 0 0 12px rgba(74,158,255,0.4);
+  }
+
+  .timeline-dot.gold { background: var(--gold); box-shadow: 0 0 12px rgba(200,169,110,0.4); }
+  .timeline-dot.green { background: var(--green); box-shadow: 0 0 12px rgba(62,207,142,0.4); }
+
+  .timeline-date {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin-bottom: 6px;
+  }
+
+  .timeline-role {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .timeline-company {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  .timeline-desc {
+    font-size: 0.9rem;
+    color: var(--text2);
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+
+  .timeline-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .timeline-bullets li {
+    display: flex;
+    gap: 10px;
+    font-size: 0.87rem;
+    color: var(--text2);
+    align-items: flex-start;
+  }
+
+  .timeline-bullets li::before {
+    content: '→';
+    color: var(--accent);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ─── CONTACT ───────────────────────────────── */
+  #contact { background: var(--bg); }
+
+  .contact-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact-inner .section-title { font-size: clamp(2.2rem, 5vw, 3.5rem); }
+
+  .contact-desc {
+    color: var(--text2);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 48px;
+  }
+
+  .contact-links {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 24px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.25s;
+  }
+
+  .contact-link:hover {
+    border-color: var(--border2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  }
+
+  .contact-link-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .cta-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(74,158,255,0.04), rgba(200,169,110,0.03));
+    pointer-events: none;
+  }
+
+  .cta-box-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    color: var(--text);
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  .cta-box-desc {
+    color: var(--text2);
+    font-size: 0.92rem;
+    margin-bottom: 24px;
+    line-height: 1.65;
+  }
+
+  /* ─── FOOTER ────────────────────────────────── */
+  footer {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    padding: 32px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: gap;
+    gap: 16px;
+  }
+
+  .footer-logo {
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--text2);
+    text-decoration: none;
+  }
+
+  .footer-logo span { color: var(--gold); }
+
+  .footer-copy {
+    font-size: 0.78rem;
+    color: var(--text3);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 0.78rem;
+    color: var(--text3);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--text2); }
+
+  /* ─── ANIMATIONS ────────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ─── DIVIDER ───────────────────────────────── */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 0 5vw;
+  }
+
+  /* ─── MOBILE NAV ────────────────────────────── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 65px; left: 0; right: 0;
+      background: rgba(8,11,15,0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 5vw;
+      gap: 24px;
+    }
+
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-card.featured { grid-column: span 1; }
+    .carousel-grid { grid-template-columns: 1fr; }
+    .hero-stats { flex-wrap: wrap; gap: 24px; }
+    section { padding: 70px 5vw; }
+    footer { flex-direction: column; text-align: center; }
+  }
+
+  @media (max-width: 480px) {
+    .writing-tabs { flex-wrap: wrap; }
+    .contact-links { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">Khotso <span>Sefako</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="container">
+    <div class="hero-eyebrow">Available for Remote Work</div>
+    <h1 class="hero-name">Khotso<br><em>Sefako</em></h1>
+    <p class="hero-title">AI-Native Content Strategist &amp; Digital Workflow Architect</p>
+    <p class="hero-desc">
+      I build modern digital systems that combine strategic content, AI-assisted workflows, and audience-focused communication, helping brands operate more intelligently online.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-secondary">Contact Me</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">8,000+</div>
+        <div class="hero-stat-label">Monthly Profile Views<br>Generated for a Client</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">3+</div>
+        <div class="hero-stat-label">Industries<br>Served</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">AI-First</div>
+        <div class="hero-stat-label">Workflow<br>Approach</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="section-label">About</div>
+        <h2 class="section-title">Strategy meets <em>systems</em></h2>
+        <p>
+          I'm an economics student and digital strategist combining <strong>analytical thinking with creative execution</strong> across content, automation, and digital strategy. My work focuses on the intersection of technology, communication, and systems design.
+        </p>
+        <p>
+          My background in economics sharpens how I approach audience behaviour, platform dynamics, and the performance metrics that actually matter, while my hands-on experience with AI tools shapes how I build and execute content workflows at scale.
+        </p>
+        <p>
+          I've worked across real estate, business, finance, tech, and community sectors, developing social media frameworks, branding concepts, and AI-assisted content systems that improve both quality and consistency.
+        </p>
+        <div class="about-highlight">
+          "The most effective modern digital work combines strong analytical foundations, AI-assisted execution, and a deep understanding of how audiences behave online."
+        </div>
+      </div>
+      <div class="about-visual reveal reveal-delay-2">
+        <div class="about-card">
+          <div class="about-card-title">Core capabilities</div>
+          <div class="about-tags">
+            <span class="tag tag-accent">Content Strategy</span>
+            <span class="tag tag-accent">AI Workflows</span>
+            <span class="tag tag-gold">Prompt Engineering</span>
+            <span class="tag tag-gold">Automation Systems</span>
+            <span class="tag">Social Media</span>
+            <span class="tag">Copywriting</span>
+            <span class="tag">Brand Strategy</span>
+            <span class="tag">Scriptwriting</span>
+            <span class="tag">Digital Marketing</span>
+          </div>
+          <div class="about-metric">
+            <div class="about-metric-icon">📈</div>
+            <div class="about-metric-text">
+              Grew a client's monthly profile views from <strong>~200 → 8,000+</strong> through strategic content restructuring
+            </div>
+          </div>
+          <div class="about-metric">
+            <div class="about-metric-icon" style="background:rgba(74,158,255,0.1)">🤖</div>
+            <div class="about-metric-text">
+              Builds <strong style="color:var(--accent2)">AI-first workflows</strong> using ChatGPT, Claude, Make.com & Canva
+            </div>
+          </div>
+          <div class="about-metric">
+            <div class="about-metric-icon" style="background:rgba(200,169,110,0.1)">🌍</div>
+            <div class="about-metric-text">
+              Remote-ready with <strong style="color:var(--gold2)">international work experience</strong> and async collaboration
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Capabilities</div>
+      <h2 class="section-title">Built for the <em>modern web</em></h2>
+      <p class="section-sub">A layered skill set across content creation, AI tooling, and strategic systems, designed for adaptable, high-output remote work.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-card-icon icon-blue">✍️</div>
+        <div class="skill-card-title">Content &amp; Strategy</div>
+        <ul class="skill-list">
+          <li>Short-form scriptwriting</li>
+          <li>Copywriting &amp; hook writing</li>
+          <li>Content strategy systems</li>
+          <li>Social media architecture</li>
+          <li>Brand voice &amp; positioning</li>
+          <li>Carousel &amp; caption writing</li>
+          <li>Retention-focused storytelling</li>
+        </ul>
+      </div>
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-card-icon icon-gold">⚡</div>
+        <div class="skill-card-title">AI &amp; Automation</div>
+        <ul class="skill-list">
+          <li>ChatGPT &amp; Claude (advanced)</li>
+          <li>Prompt engineering</li>
+          <li>Make.com workflows</li>
+          <li>AI-assisted research</li>
+          <li>Workflow structuring</li>
+          <li>Content automation pipelines</li>
+          <li>AI-accelerated drafting</li>
+        </ul>
+      </div>
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-card-icon icon-green">🛠️</div>
+        <div class="skill-card-title">Tools &amp; Platforms</div>
+        <ul class="skill-list">
+          <li>Notion &amp; Trello</li>
+          <li>Canva (advanced)</li>
+          <li>Google Workspace</li>
+          <li>CapCut (video editing)</li>
+          <li>Slack &amp; async tools</li>
+          <li>Instagram &amp; TikTok</li>
+          <li>LinkedIn strategy</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Projects</div>
+      <h2 class="section-title">Selected <em>work</em></h2>
+      <p class="section-sub">Real projects covering digital strategy, social media revamps, and AI-assisted content systems.</p>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card featured reveal">
+        <div class="project-banner project-banner-3">
+          <div class="project-banner-text">Rech Summerstrand</div>
+          <div class="project-banner-badge badge-green">Social Media Growth</div>
+        </div>
+        <div class="project-body">
+          <div class="project-subtitle">Content Strategy &amp; Engagement Revamp</div>
+          <div class="project-title">Rech Summerstrand: 40× Profile View Growth</div>
+          <p class="project-desc">
+            Led a full restructuring and modernization of a community organization's social media presence. The project focused on improving visual consistency, content structure, and audience engagement through intentional, modern social media practices.
+            <br><br>
+            The result: monthly profile views scaled from approximately 200 to over 8,000, with reels exceeding 1,000 views, through stronger positioning, recurring content systems, and a more audience-aware communication approach.
+          </p>
+          <div class="project-deliverables">
+            <span class="deliverable">Content Pillars</span>
+            <span class="deliverable">Visual Framework</span>
+            <span class="deliverable">Reel Strategy</span>
+            <span class="deliverable">Engagement Systems</span>
+            <span class="deliverable">Caption Strategy</span>
+            <span class="deliverable">Growth Architecture</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-banner project-banner-1">
+          <div class="project-banner-text">44 Strategy</div>
+          <div class="project-banner-badge badge-blue">Agency Systems</div>
+        </div>
+        <div class="project-body">
+          <div class="project-subtitle">Digital Agency Concept</div>
+          <div class="project-title">44 Strategy: Agency Positioning &amp; Systems Architecture</div>
+          <p class="project-desc">
+            Developed a full digital agency presentation covering service positioning, pricing architecture, onboarding systems, and conversion-focused communication, designed to present a modern agency offering for web design and social media management.
+          </p>
+          <div class="project-deliverables">
+            <span class="deliverable">Service Packaging</span>
+            <span class="deliverable">Pricing Structure</span>
+            <span class="deliverable">Onboarding Flow</span>
+            <span class="deliverable">Pitch Deck</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-banner project-banner-2">
+          <div class="project-banner-text">Just Property</div>
+          <div class="project-banner-badge badge-gold">Real Estate</div>
+        </div>
+        <div class="project-body">
+          <div class="project-subtitle">Instagram Audit &amp; Strategy</div>
+          <div class="project-title">Just Property PE: Social Media Strategy &amp; Audit</div>
+          <p class="project-desc">
+            Developed a strategic Instagram audit and content restructuring proposal for a real estate brand, diagnosing weaknesses in engagement, visual consistency, and content structure, then delivering a complete framework to modernize the brand's digital presence.
+          </p>
+          <div class="project-deliverables">
+            <span class="deliverable">Feed Audit</span>
+            <span class="deliverable">Content Pillars</span>
+            <span class="deliverable">CTA Strategy</span>
+            <span class="deliverable">Visual Identity</span>
+            <span class="deliverable">Monthly Structure</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- WRITING SAMPLES -->
+<section id="writing">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Writing Samples</div>
+      <h2 class="section-title">Words that <em>work</em></h2>
+      <p class="section-sub">Hooks, scripts, and carousel concepts across business, AI, productivity, and strategy.</p>
+    </div>
+
+    <div class="writing-tabs reveal">
+      <button class="tab-btn active" onclick="switchTab('hooks', this)">Hooks</button>
+      <button class="tab-btn" onclick="switchTab('scripts', this)">Scripts</button>
+      <button class="tab-btn" onclick="switchTab('carousels', this)">Carousels</button>
+    </div>
+
+    <!-- HOOKS -->
+    <div id="tab-hooks" class="tab-content active">
+      <div class="hooks-grid">
+        <div class="hook-card reveal">
+          <div class="hook-num">01</div>
+          <div class="hook-text">
+            <strong>Content vs. Consistency</strong>
+            Most businesses don't actually have a content problem.<br>They have a consistency problem disguised as a content problem.
+          </div>
+        </div>
+        <div class="hook-card reveal reveal-delay-1">
+          <div class="hook-num">02</div>
+          <div class="hook-text">
+            <strong>AI Won't Replace Marketers, But</strong>
+            AI won't replace good marketers.<br>But marketers who understand AI workflows will absolutely replace marketers who don't.
+          </div>
+        </div>
+        <div class="hook-card reveal reveal-delay-2">
+          <div class="hook-num">03</div>
+          <div class="hook-text">
+            <strong>Brand Confusion</strong>
+            If your Instagram feed looks like five different people are posting with no shared strategy, your audience feels that confusion instantly.
+          </div>
+        </div>
+        <div class="hook-card reveal">
+          <div class="hook-num">04</div>
+          <div class="hook-text">
+            <strong>The First 3 Seconds</strong>
+            The difference between content that gets ignored and content that performs is usually one thing: the first 3 seconds.
+          </div>
+        </div>
+        <div class="hook-card reveal reveal-delay-1">
+          <div class="hook-num">05</div>
+          <div class="hook-text">
+            <strong>Volume Without Structure</strong>
+            A lot of brands are posting every day and still not growing, because volume without structure rarely builds trust.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <div id="tab-scripts" class="tab-content">
+      <div class="script-card reveal">
+        <div class="script-header">
+          <span class="script-title">Script 01</span>
+          <span class="script-topic">AI &amp; Workflow Systems</span>
+        </div>
+        <div class="script-body">
+          <div class="script-section-label">Hook</div>
+          <div class="script-text">Most people are using AI like a shortcut.
+The smarter approach is using it like a system.</div>
+          <div class="script-section-label">Body</div>
+          <div class="script-text">AI becomes genuinely useful when you stop asking random questions and start building repeatable workflows around specific outcomes.
+
+Instead of asking ChatGPT to "write a caption," you build a process.
+Research first. Audience context second. Tone direction third.
+Then structure. Then refinement.
+
+That's where the quality difference starts showing.
+
+The people getting the best results from AI right now aren't the people using it the most. They're the people using it intentionally.</div>
+          <div class="script-section-label">Closing</div>
+          <div class="script-text">AI works best when strategy comes before prompting.</div>
+        </div>
+      </div>
+      <div class="script-card reveal">
+        <div class="script-header">
+          <span class="script-title">Script 02</span>
+          <span class="script-topic">Social Media Strategy</span>
+        </div>
+        <div class="script-body">
+          <div class="script-section-label">Hook</div>
+          <div class="script-text">A lot of business pages look active…
+but don't actually communicate anything clearly.</div>
+          <div class="script-section-label">Body</div>
+          <div class="script-text">You can usually tell within five seconds whether a brand has a real content strategy or whether they're just posting to stay visible.
+
+Random quotes. Random announcements. Random graphics.
+No visual consistency. No recurring content structure.
+
+The strongest business pages follow a simple formula:
+clear positioning, repeatable content pillars, consistent visual language,
+and communication that actually sounds human.</div>
+          <div class="script-section-label">Closing</div>
+          <div class="script-text">Consistency builds familiarity.
+Familiarity builds trust.
+Trust drives action.</div>
+        </div>
+      </div>
+      <div class="script-card reveal">
+        <div class="script-header">
+          <span class="script-title">Script 03</span>
+          <span class="script-topic">Modern Digital Work</span>
+        </div>
+        <div class="script-body">
+          <div class="script-section-label">Hook</div>
+          <div class="script-text">The most valuable people online right now are hybrids.</div>
+          <div class="script-section-label">Body</div>
+          <div class="script-text">The internet rewards people who can combine multiple skills into one modern workflow.
+
+Someone who can write, understand strategy, use AI tools, structure systems,
+communicate clearly, and think analytically…
+
+is significantly more valuable than someone relying on only one skill.
+
+Companies don't just want "writers" anymore.
+They want operators. People who can think, adapt, and execute across systems.</div>
+          <div class="script-section-label">Closing</div>
+          <div class="script-text">The future belongs to adaptable people with layered skill sets.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAROUSELS -->
+    <div id="tab-carousels" class="tab-content">
+      <div class="carousel-grid reveal">
+        <div class="carousel-card">
+          <div class="carousel-header">
+            <div class="carousel-header-title">"Why Most Business Content Doesn't Convert"</div>
+          </div>
+          <div class="carousel-slides">
+            <div class="carousel-slide">
+              <span class="slide-num">01</span>
+              <div class="slide-text"><strong>The real problem</strong>Most brands think they need better graphics. They usually need better communication.</div>
+            </div>
+            <div class="carousel-slide">
+              <span class="slide-num">02</span>
+              <div class="slide-text">If your audience can't immediately understand who you are, what you do, and why you matter, they leave.</div>
+            </div>
+            <div class="carousel-slide">
+              <span class="slide-num">03</span>
+              <div class="slide-text">Posting consistently without strategy creates activity... not clarity.</div>
+            </div>
+            <div class="carousel-slide">
+              <span class="slide-num">04</span>
+              <div class="slide-text"><strong>Strong content follows 3 things:</strong>recognizable structure, consistent tone, clear audience intention.</div>
+            </div>
+            <div class="carousel-slide">
+              <span class="slide-num">05</span>
+              <div class="slide-text"><strong>The goal isn't visibility.</strong>The goal is trust. The strongest brands don't just post more. They communicate more clearly.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-card">
+          <div class="carousel-header">
+            <div class="carousel-header-title">"What AI Actually Does Well"</div>
+          </div>
+          <div class="carousel-slides">
+            <div class="carousel-slide">
+              <span class="slide-num">01</span>
+              <div class="slide-text"><strong>Not what you think</strong>AI is not great at replacing human thinking. It's great at accelerating structured workflows.</div>
+            </div>
+            <div class="carousel-slide">
+              <span class="slide-num">02</span>
+              <div class="slide-text"><strong>AI works best for:</strong>outlining, idea generation, organization, research assistance, structural drafting.</div>
+            </div>
+            <div class="carousel-slide">
+              <span class="slide-num">03</span>
+              <div class="slide-text"><strong>The human part still matters most:</strong>judgment, tone, strategy, audience understanding, communication quality.</div>
+            </div>
+            <div class="carousel-slide">
+              <span class="slide-num">04</span>
+              <div class="slide-text">The problem isn't AI-generated content. The problem is lazy prompting and zero refinement.</div>
+            </div>
+            <div class="carousel-slide">
+              <span class="slide-num">05</span>
+              <div class="slide-text"><strong>The takeaway:</strong>AI amplifies good systems. It doesn't magically create them.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Experience</div>
+      <h2 class="section-title">The <em>track record</em></h2>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2024 to Present</div>
+        <div class="timeline-role">Digital Strategist &amp; Content Lead</div>
+        <div class="timeline-company">Freelance / Independent</div>
+        <p class="timeline-desc">Developed strategic social media systems, branding concepts, and AI-assisted content structures for clients across real estate, business, finance, and technology.</p>
+        <ul class="timeline-bullets">
+          <li>Grew a client's monthly profile views from ~200 to 8,000+ through strategic content restructuring and modern social media practices</li>
+          <li>Built AI-assisted drafting and content refinement workflows using ChatGPT, Claude, and Canva</li>
+          <li>Produced Instagram audits, content pillars, visual frameworks, and caption strategies for multiple client brands</li>
+          <li>Developed the 44 Strategy digital agency concept including service packaging, pricing architecture, and onboarding systems</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot gold"></div>
+        <div class="timeline-date">2024</div>
+        <div class="timeline-role">AI Content Operations Associate → Recruitment Officer</div>
+        <div class="timeline-company">OIgetit</div>
+        <p class="timeline-desc">Joined as an AI Content Operations Associate and was promoted to Recruitment Officer, managing a remote team of social media content creators.</p>
+        <ul class="timeline-bullets">
+          <li>Managed content quality and operational consistency across a distributed team of remote creators</li>
+          <li>Promoted within role to Recruitment Officer: screening, evaluating, and onboarding new content team members</li>
+          <li>Applied AI workflow optimisation to improve content review speed and overall team output quality</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot green"></div>
+        <div class="timeline-date">2023 to 2024</div>
+        <div class="timeline-role">Marketing Contributor &amp; Content Strategist</div>
+        <div class="timeline-company">Community &amp; Organizational Projects</div>
+        <p class="timeline-desc">Contributed to content planning, engagement analysis, and communication strategy through social media-focused projects and organizational digital revamps.</p>
+        <ul class="timeline-bullets">
+          <li>Modernized and restructured digital content systems for community organizations to improve audience engagement and platform activity</li>
+          <li>Introduced visual consistency frameworks and recurring content structures across managed accounts</li>
+          <li>Applied automation-focused creative systems to reduce production time while maintaining content quality</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="section-label reveal" style="text-align:center">Contact</div>
+      <h2 class="section-title reveal" style="text-align:center">Let's build something <em>together</em></h2>
+      <p class="contact-desc reveal">
+        Open to remote content writing, digital strategy, scriptwriting, AI workflow consulting, and startup marketing roles. If you're building something interesting, I'd like to hear about it.
+      </p>
+      <div class="contact-links reveal">
+        <a href="mailto:Khotsosefako9@gmail.com" class="contact-link">
+          <div class="contact-link-icon" style="background:rgba(74,158,255,0.1)">📧</div>
+          Khotsosefako9@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/khotso-sefako-6a615b39a?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon" style="background:rgba(10,102,194,0.15)">💼</div>
+          LinkedIn
+        </a>
+      </div>
+      <div class="cta-box reveal">
+        <div class="cta-box-title">Available for freelance &amp; contract work</div>
+        <p class="cta-box-desc">
+          Whether you need a content strategist, AI workflow consultant, scriptwriter, or digital marketing specialist. I work remotely and am built for async collaboration.
+        </p>
+        <a href="mailto:Khotsosefako9@gmail.com" class="btn-primary">Start a Conversation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#hero" class="footer-logo">Khotso <span>Sefako</span></a>
+  <p class="footer-copy">© 2025 Khotso Sefako. All rights reserved.</p>
+  <ul class="footer-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  reveals.forEach(el => observer.observe(el));
+
+  // Tab switching
+  function switchTab(id, btn) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  // Mobile nav
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  // Close nav on link click
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.background = window.scrollY > 30
+      ? 'rgba(8,11,15,0.95)'
+      : 'rgba(8,11,15,0.82)';
+  });
+</script>
+</body>
+</html>    
